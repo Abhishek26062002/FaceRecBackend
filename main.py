@@ -18,10 +18,10 @@ app = FastAPI()
 
 # CORS middleware
 from fastapi.middleware.cors import CORSMiddleware
-origins = ["https://78lw0q6f-5173.inc1.devtunnels.ms/"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=['*'],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
