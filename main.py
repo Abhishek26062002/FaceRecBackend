@@ -10,10 +10,22 @@ from tensorflow.keras.layers import GlobalAveragePooling2D, Dropout, Dense
 from tensorflow.keras.models import Model
 from tensorflow.keras.applications import MobileNetV3Small, MobileNetV3Large
 import json
+import google.generativeai as genai
 from PIL import Image
 import shutil
-
+genai.configure(api_key = 'AIzaSyAhSq07dLuxm4RnO1frxNgUBufydWpTTsw')
 app = FastAPI()
+
+# CORS middleware
+from fastapi.middleware.cors import CORSMiddleware
+origins = ["https://78lw0q6f-5173.inc1.devtunnels.ms/"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Global variables
 model = None
