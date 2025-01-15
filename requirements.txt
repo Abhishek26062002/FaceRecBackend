@@ -1,0 +1,9 @@
+google.generativeai
+pillow
+tensorflow-cpu
+fastapi
+uvicorn
+starlette
+typing
+jinja2
+python-multipart
