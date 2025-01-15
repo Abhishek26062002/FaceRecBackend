@@ -1,6 +1,6 @@
 google.generativeai
 pillow
-tensorflow
+tensorflow-cpu
 fastapi
 uvicorn
 starlette
